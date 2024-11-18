@@ -125,28 +125,29 @@ nav {
     padding: 8px;
     padding-bottom: 5%;
     padding-top: 18%;
+    padding-left: 71%;
     display: flex; 
-    flex-wrap: nowrap;
 }
 
-@media (max-width: 400px) {
+
+@media (max-width: 700px) {
     nav {
-        padding-left: 37%;
+        padding-left: 71%;
     }
 }
 
-@media (min-width: 700px) {
+@media (max-width: 450px) {
     nav {
-        padding-left: 67%;
+        padding-left: 30%;
     }
 }
-
 
 nav a {
     color: white;
     padding: 2px;
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.329);
     border-radius: 5px;
+    
     white-space: nowrap;
 }
 
