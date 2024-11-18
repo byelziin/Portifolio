@@ -56,7 +56,7 @@ body.loaded {
 }
 
 #cabeçalho {
-    padding-bottom: 3%;
+    padding-bottom: 14%;
     
 }
 
@@ -118,18 +118,38 @@ body.loaded {
 }
 
  
+.r {
+    padding-top: 1%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 20px;
+    
+}
+
+.rede {
+    
+    padding: 2px;
+    display: inline-block;
+    border-radius: 10px;
+    width: 55px;
+    height: 55px;
+    background-color: rgb(161, 161, 161);
+    border: 3px solid white;
+}
+
 .caixa {
     display: flex; /* Usando flexbox para alinhamento */
     justify-content: flex-end; /* Alinha o conteúdo (nav) à direita */
-    width: 100%; /* Garante que a caixa ocupe toda a largura disponível */
+    width: 101%; /* Garante que a caixa ocupe toda a largura disponível */
     overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do container */
 }
 
 nav {
     font-family: var(--padrao);
     padding: 8px;
-    padding-bottom: 5%;
-    padding-top: 13%;
+    padding-bottom: 3%;
+    padding-top: 4%;
     display: inline-block;
     white-space: nowrap;  /* Impede a quebra de linha dentro do nav também */
     
@@ -257,6 +277,51 @@ div#q6 {
     text-align: center;
     color: rgb(123, 132, 140);
     padding-top: 45px;
+    padding-bottom: 25px;
+}
+
+.quadradoo {
+    padding: 40px;
+    display: inline-block;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    border-bottom: 2px solid;
+}
+
+div#um {
+    background-image: url('Imagens/java.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div#dois {
+    background-image: url('Imagens/javaS.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div#tres {
+    background-image: url('Imagens/Mysql.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div#quatro {
+    background-image: url('Imagens/reactt.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div#cinco {
+    background-image: url('Imagens/ingless.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 footer > p {
@@ -267,3 +332,4 @@ footer > p {
 script {
     padding-top: 30%;
 }
+
