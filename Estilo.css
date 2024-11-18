@@ -127,7 +127,7 @@ nav {
     padding-bottom: 5%;
     padding-top: 20%;
     display: flex; 
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 
