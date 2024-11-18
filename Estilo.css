@@ -99,12 +99,12 @@ body.loaded {
 /* Media query para telas maiores (ex: tv) */
 @media (max-width: 900px) {
     #cabeçalho > img {
-        width: 22%;
+        width: 44%;
     }
 }
 
 /* Media query para telas media (ex: tablets) */
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     #cabeçalho > img {
         width: 42%;
     }
