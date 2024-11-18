@@ -69,7 +69,8 @@ body.loaded {
     padding-bottom: 3px;
     font-family: var(--padrao);
     width: 35%;
-    
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 #Cnome {
