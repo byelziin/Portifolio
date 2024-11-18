@@ -123,11 +123,22 @@ body.loaded {
 nav {
     font-family: var(--padrao);
     padding: 8px;
-    padding-left: 67%;
     padding-bottom: 5%;
-    padding-top: 20%;
+    padding-top: 18%;
     display: flex; 
     flex-wrap: nowrap;
+}
+
+@media (max-width: 400px) {
+    nav {
+        padding-left: 37%;
+    }
+}
+
+@media (min-width: 700px) {
+    nav {
+        padding-left: 67%;
+    }
 }
 
 
