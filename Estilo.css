@@ -13,7 +13,7 @@
 
     --corF: linear-gradient(to bottom, rgb(24, 39, 51), rgb(60, 75, 89));
     --corL: rgb(123, 132, 140);
-    --corIm: linear-gradient(to right, rgb(123, 132, 140), rgb(0, 0, 0));
+    --corIm: linear-gradient(to right, rgb(123, 132, 140), rgb(48, 47, 47));
 
 }
 
@@ -163,7 +163,7 @@ nav a {
     padding: 2px;
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.329);
     border-radius: 5px;
-
+    transition: all 0.3s ease;
 }
 
 

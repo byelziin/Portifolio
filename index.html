@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Estilo.css">
 </head>
 <body>
-    <div class="container">
+    <div id="Contato" class="container">
             <header>
                 <h1 class="sald">Welcome!</h1>
                 <div id="cabeçalho">
@@ -87,6 +87,27 @@
         <script>
             window.addEventListener("load", function() {
                 document.body.classList.add("loaded");  // Adiciona a classe após o carregamento
+            });
+        </script>
+        <script>
+            // Selecionar todos os links de navegação
+            const links = document.querySelectorAll('nav a');
+    
+            // Adicionar um evento de clique em cada link
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Evitar que o link faça o comportamento padrão de rolagem instantânea
+    
+                    // Obter o ID do destino do link (usando href)
+                    const targetId = this.getAttribute('href').substring(1); // Remove o "#" do href
+                    const targetElement = document.getElementById(targetId);
+    
+                    // Rolagem suave até o elemento de destino
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth', // Rolagem suave
+                        block: 'start' // Alinha o topo do elemento com o topo da tela
+                    });
+                });
             });
         </script>
     </div>
