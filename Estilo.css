@@ -77,6 +77,13 @@ body.loaded {
 @media (min-width: 400px) {
     #nome {
         width: 55%;
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 600px) {
+    #nome {
+        width: 55%;
         font-size: 2em;
     }
 }
@@ -151,8 +158,20 @@ body.loaded {
 .caixa {
     display: flex; /* Usando flexbox para alinhamento */
     justify-content: flex-end; /* Alinha o conteúdo (nav) à direita */
-    width: 101%; /* Garante que a caixa ocupe toda a largura disponível */
+    width: 105%; /* Garante que a caixa ocupe toda a largura disponível */
     overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do container */
+}
+
+@media (min-width: 400px) {
+    .caixa {
+        width: 105%;
+    }
+}
+
+@media (min-width: 650px) {
+    .caixa {
+        width: 101%;
+    }
 }
 
 nav {
@@ -198,6 +217,7 @@ h1#sobre {
     color: rgb(123, 132, 140);
     padding-top: 50px;
     padding-right: 49%;
+    white-space: nowrap;
 }
 
 img {
