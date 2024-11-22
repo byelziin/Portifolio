@@ -39,9 +39,9 @@ body.loaded {
 }
 
 .container {
-    width: 80%;               /* Largura de 100% da tela */
+    width: 50%;              /* Largura de 100% da tela */
     max-width: 900px;         /* Largura máxima de 900px */
-    min-width: 300px;          /* Largura mínima de 400px */
+    min-width: 360px;          /* Largura mínima de 400px */
     margin: 0% auto;            /* Centraliza o container na tela */
     padding: 20px;             /* Espaçamento interno */
     
@@ -49,9 +49,18 @@ body.loaded {
 
 @media (min-width: 500px) {
     .container {
-        width: 90%;
+        
+        
     }
 }
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%;   
+        padding: 15px;
+    }
+}
+
 
 
 .sald {
@@ -168,9 +177,9 @@ body.loaded {
     overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do container */
 }
 
-@media (min-width: 400px) {
+@media (max-width: 400px) {
     .caixa {
-        width: 105%;
+        width: 102%;
     }
 }
 
