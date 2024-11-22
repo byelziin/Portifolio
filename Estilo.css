@@ -41,7 +41,7 @@ body.loaded {
 .container {
     width: 50%;               /* Largura de 100% da tela */
     max-width: 900px;         /* Largura máxima de 900px */
-    min-width: 400px;          /* Largura mínima de 400px */
+    min-width: 300px;          /* Largura mínima de 400px */
     margin: 0% auto;            /* Centraliza o container na tela */
     padding: 20px;             /* Espaçamento interno */
     
@@ -68,9 +68,17 @@ body.loaded {
     padding-left: 25px;
     padding-bottom: 3px;
     font-family: var(--padrao);
-    width: 35%;
+    width: 45%;
+    font-size: 24px;
     display: flex;
     flex-wrap: nowrap;
+}
+
+@media (min-width: 400px) {
+    #nome {
+        width: 55%;
+        font-size: 2em;
+    }
 }
 
 #Cnome {
@@ -115,6 +123,8 @@ body.loaded {
     #cabeçalho > img {
         width: 42%;
     }
+
+    
 }
 
  
