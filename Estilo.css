@@ -41,15 +41,15 @@ body.loaded {
 .container {
     width: 80%;               /* Largura de 100% da tela */
     max-width: 900px;         /* Largura máxima de 900px */
-    min-width: 350px;          /* Largura mínima de 400px */
+    min-width: 300px;          /* Largura mínima de 400px */
     margin: 0% auto;            /* Centraliza o container na tela */
     padding: 20px;             /* Espaçamento interno */
     
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
     .container {
-        width: 50%
+        width: 90%;
     }
 }
 
