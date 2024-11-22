@@ -122,7 +122,8 @@ body.loaded {
     padding: 10px;
     border-radius: 90px;
     position: relative;  /* Permite o uso da propriedade 'top' */
-    top: -65px;          /* Move a imagem 10px para cima */
+    top: -102px;          /* Move a imagem 10px para cima */
+    left: 14.5px;
     
 }
 
@@ -130,13 +131,18 @@ body.loaded {
 @media (min-width: 600px) {
     #cabeçalho > img {
         width: 10em
+        top: -65px;
     }
 }
+
+
 
 /* Media query para telas media (ex: tablets) */
 @media (min-width: 900px) {
     #cabeçalho > img {
         width: 11.5em;
+        left: 19px;
+        top: -50px;
     }
 }
 
