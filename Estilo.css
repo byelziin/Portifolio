@@ -337,9 +337,16 @@ div#q6 {
     padding: 40px;
     display: inline-block;
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    width: 55px;
+    height: 55px;
     border-bottom: 2px solid;
+}
+
+@media (min-width: 450px) {
+    .quadradoo {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 div#um {
