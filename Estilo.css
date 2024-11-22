@@ -57,7 +57,7 @@ body.loaded {
 @media (max-width: 400px) {
     .container {
         width: 90%;   
-        padding: 15px;
+        padding: 17px;
     }
 }
 
@@ -163,29 +163,38 @@ body.loaded {
     
     padding: 2px;
     display: inline-block;
-    border-radius: 10px;
-    width: 55px;
-    height: 55px;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
     background-color: rgb(161, 161, 161);
     border: 3px solid white;
+}
+
+@media (min-width: 500px) {
+    .rede {
+        border-radius: 10px;
+        width: 55px;
+        height: 55px;
+    }
 }
 
 .caixa {
     display: flex; /* Usando flexbox para alinhamento */
     justify-content: flex-end; /* Alinha o conteúdo (nav) à direita */
-    width: 105%; /* Garante que a caixa ocupe toda a largura disponível */
+    width: 103%; /* Garante que a caixa ocupe toda a largura disponível */
     overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do container */
 }
 
-@media (max-width: 400px) {
+@media (min-width: 900px) {
     .caixa {
-        width: 102%;
+        width: 101%;
+        font-size: 1em;
     }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 200px) {
     .caixa {
-        width: 101%;
+        font-size: 14px;
     }
 }
 
@@ -196,7 +205,6 @@ nav {
     padding-top: 4%;
     display: inline-block;
     white-space: nowrap;  /* Impede a quebra de linha dentro do nav também */
-    
     
 }
 
