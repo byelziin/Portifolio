@@ -1,118 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifólio</title>
-    <link rel="icon" href="Imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="Estilo.css">
-</head>
-<body>
-    <div id="Contato" class="container">
-            <header>
-                <h1 class="sald">Welcome!</h1>
-                <div id="cabeçalho">
-                    <h2 id="nome">Gabriel Teixeira Guedes</h2>
-                    <img src="Imagens/u guri.jpg" alt="Avatar">
-                    <h2 id="Cnome">Software Developer</h2>                    
-                    <h2 id="Cnome">Brazil, Rio Grande do Sul, Viamão</h2>
-                    
-                </div>
-                <div class="r">
-                    <a href="https://www.linkedin.com/in/gabriel-guedes-391155264/" target="_blank">
-                        <img class="rede" src="Imagens/linkedin.png" alt="Linkedin">
-                    </a>
-                    <a href="https://github.com/byelziin" target="_blank">
-                        <img  class="rede" src="Imagens/github.png" alt="GitHub">
-                    </a>
-                </div>
-                <div class="caixa">
-                    <nav>
-                        <a href="#sobre">About me</a>
-                        <a href="#Certificado">Certificates</a>
-                        <a href="#Sk">Skill</a>
-                        <a href="#Contato">Contact</a>
-                    </nav>
-                </div>
-                <hr class="linha">
-            </header>
-            <section>
-                <div>
-                    <h1 id="sobre"> <img src="user.png" alt="User">About Me</h1>
-                        <p>Hello, my name is Gabriel Guedes, and I am a software developer. Throughout my academic journey, I have participated in various activities, both individually and in teams, which have helped me enhance my technical and collaborative skills. <br>I am deeply committed to continuous learning in the field and to overcoming challenges, whether personal or professional. Currently, I am seeking new opportunities in software development where I can apply my knowledge and continue growing. I value clear communication, teamwork, and building strong relationships with my colleagues. I am dedicated to achieving my goals and have a lifelong commitment to learning and evolving in the field of technology.</br></p>
-                        </div>
-                    <h1 id="sobre"> <img src="chapeu.png" alt="hat">Education</h1>
-                        <p>I completed my high school education at Júlio de Castilhos School, located in downtown Porto Alegre, the capital of Rio Grande do Sul. During my last year of school, I discovered my passion for technology and the evolution of systems, which led me to embark on a journey of continuous learning. I started studying and completing courses that not only expanded my knowledge but also provided me with certifications as a developer. After finishing high school, I enrolled in the undergraduate program in Systems Analysis and Development at Uniasselvi. Additionally, I was a finalist in the Geração Caldeira 2024 program, where I had the opportunity to access a variety of courses on the Alura platform, earning 13 certifications in different areas of development.</p>
-                    <h1 id="Certificado" class="cert">Some certificates</h1>
-                    <div class="foto">
-                        
-                        <div class="quadrado" id="q1">
-                        </div>
-                        <div class="quadrado" id="q2">
-                        </div>
-                        <div class="quadrado" id="q3">
-                        </div>
-                        <div class="quadrado" id="q4">
-                        </div>
-                        <div class="quadrado" id="q5">
-                        </div>
-                        <div class="quadrado" id="q6">
-                        </div>
-                    </div>
-
-                    <h1 id="Sk">Main Skills</h1>
-
-                    <div class="foto">
-
-                        <div class="quadradoo" id="um">
-                        </div>
-                        <div class="quadradoo"  id="dois">
-                        </div>
-                        <div class="quadradoo"  id="tres">
-                        </div>
-                        <div class="quadradoo"  id="quatro">
-                        </div>
-                        <div class="quadradoo"  id="cinco">
-                        </div>
-                        <div class="quadradoo"  id="seis">
-                        </div>
-                        <div class="quadradoo"  id="sete">
-                        </div>
-                    </div>
-
-                    <hr class="linha">
-                </div>
-        </section>
-        <footer>
-            <p>Website created by Gabriel Guedes</p>
-        </footer>
-        <script>
-            window.addEventListener("load", function() {
-                document.body.classList.add("loaded");  // Adiciona a classe após o carregamento
-            });
-        </script>
-        <script>
-            // Selecionar todos os links de navegação
-            const links = document.querySelectorAll('nav a');
-    
-            // Adicionar um evento de clique em cada link
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault(); // Evitar que o link faça o comportamento padrão de rolagem instantânea
-    
-                    // Obter o ID do destino do link (usando href)
-                    const targetId = this.getAttribute('href').substring(1); // Remove o "#" do href
-                    const targetElement = document.getElementById(targetId);
-    
-                    // Rolagem suave até o elemento de destino
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth', // Rolagem suave
-                        block: 'start' // Alinha o topo do elemento com o topo da tela
-                    });
-                });
-            });
-        </script>
-    </div>
-
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
