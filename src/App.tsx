@@ -64,7 +64,7 @@ export default function App() {
               <a className="primary-button" href="#contato" onClick={(event) => handleNavClick(event, 'contato')}>
                 Vamos conversar
               </a>
-              <a className="ghost-button" href="mailto:gabriel.guedes.dev@gmail.com">
+              <a className="ghost-button" href="mailto:gabrieltguedes7@gmail.com">
                 Envie um e-mail
               </a>
             </div>
@@ -193,7 +193,7 @@ export default function App() {
               <a className="primary-button" href="mailto:gabriel.guedes.dev@gmail.com">
                 Contato por e-mail
               </a>
-              <a className="ghost-button" href="https://wa.me/5551999999999" target="_blank" rel="noreferrer">
+              <a className="ghost-button" href="https://wa.me/5551985007928" target="_blank" rel="noreferrer">
                 Fale no WhatsApp
               </a>
             </div>
