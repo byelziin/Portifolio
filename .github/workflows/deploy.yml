@@ -16,6 +16,8 @@ concurrency:
 
 jobs:
   build:
+    # Skip Pages build when the repository is private
+    if: ${{ !github.event.repository.private }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,6 +41,8 @@ jobs:
           path: ./dist
 
   deploy:
+    # Skip Pages deploy when the repository is private
+    if: ${{ !github.event.repository.private }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
