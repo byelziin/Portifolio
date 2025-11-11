@@ -1,0 +1,16 @@
+# Dependências e build
+node_modules/
+dist/
+
+# Vite/TypeScript artefatos
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Ambiente
+.env*
+
+# SO/Editor
+.DS_Store
+Thumbs.db
+.vscode/
