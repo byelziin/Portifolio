@@ -30,8 +30,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Build (define base para GitHub Pages)
+        run: VITE_BASE=/Portifolio/ npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
