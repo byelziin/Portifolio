@@ -213,6 +213,9 @@ main {
   margin-top: 24px;
   color: var(--text-muted);
   font-size: 16px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .hero-actions {
@@ -315,6 +318,13 @@ main {
   gap: 18px;
   color: var(--text-muted);
   font-size: 16px;
+}
+
+/* Justifica o texto para nivelar a borda direita na coluna esquerda */
+.about-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .stats-grid {

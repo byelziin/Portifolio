@@ -10,9 +10,11 @@ export const navLinks: Link[] = [
 ];
 
 export const highlights: Highlight[] = [
-  { id: 'highlight-cert', value: '13+', label: 'Certificações', description: 'Cursos concluídos em tecnologia.' },
-  { id: 'highlight-quality', value: '100%', label: 'Foco em qualidade', description: 'Código limpo e testado.' },
-  { id: 'highlight-program', value: 'Geração', label: 'Caldeira 2024', description: 'Finalista do programa.' },
+  { id: 'highlight-program', value: 'Uniasselvi', label: 'Análise e Desenvolvimento de Sistemas', description: 'ADS' },
+  { id: 'highlight-program', value: 'Instituto Caldeira', label: 'Geração Caldeira 2025', description: 'Trilha de JAVA' },
+  { id: 'highlight-program', value: 'Cognitiva Brasil', label: 'Desenvolvedor Front-End', description: 'Estágiario.' },
+  { id: 'highlight-cert', value: '15+', label: 'Certificações', description: 'Cursos e especializações concluídos em tecnologia, programação e metodologias ágeis.' },
+  { id: 'highlight-quality', value: '100%', label: 'Foco em qualidade e comunicação clara', description: 'Código limpo, testado e de fácil manutenção.' },
 ];
 
 export const services: Service[] = [

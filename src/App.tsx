@@ -85,19 +85,18 @@ export default function App() {
         <section className="section about" aria-labelledby="about-title">
           <div className="section-header">
             <p className="section-eyebrow">Sobre mim</p>
-            <h3 id="about-title">Construindo soluções de impacto</h3>
+            <h3 id="about-title">Construindo o futuro através da tecnologia</h3>
           </div>
           <div className="about-grid">
             <div className="about-text">
               <p>
-                Natural de Viamão, no Rio Grande do Sul, iniciei minha jornada na tecnologia durante o ensino médio.
-                Desde então, participei de projetos acadêmicos e pessoais que ampliaram minha visão sobre desenvolvimento
-                e trabalho em equipe.
+                Natural de Viamão, no Rio Grande do Sul, descobri ainda no ensino médio o quanto a tecnologia poderia transformar ideias em realidade — e desde então, me apaixonei por esse universo.
               </p>
               <p>
-                Curso Análise e Desenvolvimento de Sistemas na Uniasselvi e fui finalista do programa Geração Caldeira
-                2024, acessando conteúdos avançados na plataforma Alura. Busco sempre unir código limpo, design moderno e
-                comunicação clara para entregar resultados confiáveis.
+                Sou uma pessoa apaixonada pela área de tecnologia, curioso por natureza e movida por desafios. Acredito no poder do aprendizado contínuo e gosto de explorar novas formas de criar, inovar e resolver problemas com propósito.
+              </p>
+              <p>
+                Mais do que escrever código, busco entender pessoas, construir soluções que façam diferença e evoluir um pouco mais a cada projeto. Sou um sonhador que acredita no impacto positivo da tecnologia e na força da colaboração para alcançar grandes resultados.
               </p>
             </div>
             <div className="stats-grid">
