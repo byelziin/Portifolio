@@ -1,0 +1,66 @@
+/* Estilos do Carrossel de Certificados */
+.certificates-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.certificates-carousel {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  will-change: transform;
+}
+
+.certificates-carousel {
+  animation: scroll 25s linear infinite;
+}
+
+.certificates-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.certificates-carousel .certificate-card {
+  flex: 0 0 280px;
+  min-width: 280px;
+}
+
+/* Responsividade */
+@media (max-width: 720px) {
+  .certificates-carousel .certificate-card {
+    flex: 0 0 260px;
+    min-width: 260px;
+  }
+  
+  .certificates-carousel {
+    gap: 15px;
+  }
+}
+
+/* Suporte para touch/swipe em dispositivos móveis */
+@media (hover: none) and (pointer: coarse) {
+  .certificates-carousel-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    mask-image: none;
+  }
+  
+  .certificates-carousel {
+    animation: none;
+  }
+  
+  .certificates-carousel .certificate-card {
+    scroll-snap-align: start;
+  }
+}

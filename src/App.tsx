@@ -1,4 +1,5 @@
 import { useEffect, type MouseEvent } from 'react';
+import CertificatesCarousel from './components/CertificatesCarousel';
 
 import { certificates, highlights, navLinks, services, skills } from './data/portfolioContent';
 
@@ -134,22 +135,7 @@ export default function App() {
               Uma coleção que reforça minha dedicação ao crescimento profissional.
             </span>
           </div>
-          <div className="cards-grid certificates-grid">
-            {certificates.map((certificate) => (
-              <article key={certificate.id} className="card certificate-card">
-                <div
-                  className="certificate-image"
-                  style={{ backgroundImage: `url(${certificate.image})` }}
-                  role="img"
-                  aria-label={certificate.title}
-                />
-                <div className="certificate-content">
-                  <h4>{certificate.title}</h4>
-                  <p>{certificate.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <CertificatesCarousel />
         </section>
 
         <section className="section skills" id="skills" aria-labelledby="skills-title">
@@ -206,4 +192,3 @@ export default function App() {
     </div>
   );
 }
-
