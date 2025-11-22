@@ -3,11 +3,13 @@ import { certificates } from '../data/portfolioContent';
 import '../styles/carousel.css';
 
 export default function CertificatesCarousel() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
+    const container = containerRef.current;
+    const track = trackRef.current;
+    if (!container || !track) return;
 
     // Duplicar os certificados para criar o efeito infinito
     const duplicatedCertificates = [...certificates, ...certificates];
@@ -33,17 +35,21 @@ export default function CertificatesCarousel() {
         article.setAttribute('aria-hidden', 'true');
       }
       
-      scrollContainer.appendChild(article);
+      track.appendChild(article);
     });
 
     let animationId: number;
     let scrollSpeed = 0.8;
+    const isMobile = matchMedia('(hover: none) and (pointer: coarse)').matches;
+    if (isMobile) {
+      scrollSpeed = 0.6;
+    }
     
     const animateScroll = () => {
-      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-        scrollContainer.scrollLeft = 0;
+      if (container.scrollLeft >= track.scrollWidth / 2) {
+        container.scrollLeft = 0;
       } else {
-        scrollContainer.scrollLeft += scrollSpeed;
+        container.scrollLeft += scrollSpeed;
       }
       animationId = requestAnimationFrame(animateScroll);
     };
@@ -61,28 +67,51 @@ export default function CertificatesCarousel() {
       animationId = requestAnimationFrame(animateScroll);
     };
 
-    scrollContainer.addEventListener('mouseenter', handleMouseEnter);
-    scrollContainer.addEventListener('mouseleave', handleMouseLeave);
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
+
+    const handleTouchStart = () => {
+      cancelAnimationFrame(animationId);
+    };
+
+    const handleTouchEnd = () => {
+      animationId = requestAnimationFrame(animateScroll);
+    };
+
+    container.addEventListener('touchstart', handleTouchStart, { passive: true });
+    container.addEventListener('touchend', handleTouchEnd, { passive: true });
 
     // Scroll com o mouse (horizontal)
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
-      scrollContainer.scrollLeft += e.deltaY * 2;
+      container.scrollLeft += e.deltaY * 2;
     };
 
-    scrollContainer.addEventListener('wheel', handleWheel, { passive: false });
+    container.addEventListener('wheel', handleWheel, { passive: false });
+
+    const handleVisibility = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animationId);
+      } else {
+        animationId = requestAnimationFrame(animateScroll);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
 
     return () => {
       cancelAnimationFrame(animationId);
-      scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
-      scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
-      scrollContainer.removeEventListener('wheel', handleWheel);
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+      container.removeEventListener('touchstart', handleTouchStart);
+      container.removeEventListener('touchend', handleTouchEnd);
+      container.removeEventListener('wheel', handleWheel);
+      document.removeEventListener('visibilitychange', handleVisibility);
     };
   }, []);
 
   return (
-    <div className="certificates-carousel-container">
-      <div className="certificates-carousel" ref={scrollContainerRef}></div>
+    <div className="certificates-carousel-container" ref={containerRef}>
+      <div className="certificates-carousel" ref={trackRef}></div>
     </div>
   );
 }

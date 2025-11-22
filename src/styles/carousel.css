@@ -13,23 +13,6 @@
   will-change: transform;
 }
 
-.certificates-carousel {
-  animation: scroll 25s linear infinite;
-}
-
-.certificates-carousel:hover {
-  animation-play-state: paused;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 .certificates-carousel .certificate-card {
   flex: 0 0 280px;
   min-width: 280px;
@@ -54,10 +37,6 @@
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     mask-image: none;
-  }
-  
-  .certificates-carousel {
-    animation: none;
   }
   
   .certificates-carousel .certificate-card {
