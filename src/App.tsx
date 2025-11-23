@@ -18,6 +18,17 @@ export default function App() {
     target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const heroSkillsIds = [
+    'skill-java',
+    'skill-react',
+    'skill-next',
+    'skill-typescript',
+    'skill-mysql',
+    'skill-postgres',
+    'skill-php',
+    'skill-english',
+  ];
+
   return (
     <div className="page" id="inicio">
       <header className="header">
@@ -70,9 +81,10 @@ export default function App() {
               </a>
             </div>
             <div className="hero-tags" aria-label="Tecnologias em destaque">
-              {skills.slice(0, 6).map((skill) => (
-                <span key={skill.id}>{skill.label}</span>
-              ))}
+              {heroSkillsIds.map((id) => {
+                const skill = skills.find((s) => s.id === id);
+                return <span key={id}>{skill?.label}</span>;
+              })}
             </div>
           </div>
 

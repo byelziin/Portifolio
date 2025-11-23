@@ -87,5 +87,6 @@ export const skills: Skill[] = [
   { id: 'skill-postgres', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', label: 'PostgreSQL' },
   { id: 'skill-typescript', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', label: 'TypeScript' },
   { id: 'skill-photoshop', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg', label: 'Photoshop CS6' },
+  { id: 'skill-angular', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg', label: 'Angular' },
 ];
 
