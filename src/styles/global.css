@@ -454,6 +454,8 @@ main {
 .skill-card span {
   font-weight: 500;
   color: var(--text-soft);
+  display: block;
+  text-align: center;
 }
 
 .contact-card {
