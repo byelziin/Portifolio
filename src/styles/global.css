@@ -514,8 +514,22 @@ main {
   }
 
   .header {
-    position: static;
+    position: sticky;
+    top: 8px;
     padding: 16px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: center;
   }
 
   .navigation a {
