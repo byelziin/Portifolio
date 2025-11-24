@@ -20,18 +20,18 @@ export const highlights: Highlight[] = [
 export const services: Service[] = [
   {
     id: 'service-web',
-    title: 'Website Development',
-    description: 'Interfaces responsivas com animações sutis, acessibilidade e SEO técnico.',
+    title: 'Desenvolvimento Front-end',
+    description: 'Interfaces modernas, rápidas e acessíveis, focadas na experiência do usuário e conversão.',
   },
   {
     id: 'service-app',
-    title: 'App Development',
-    description: 'Aplicações completas com integrações, API e arquitetura escalável.',
+    title: 'Desenvolvimento Back-end',
+    description: 'Funcionalidades, integrações e segurança para seu sistema operar de forma confiável.',
   },
   {
     id: 'service-hosting',
-    title: 'Website Hosting',
-    description: 'Deploy contínuo, automação de builds e monitoramento de performance.',
+    title: 'Dados, Hospedagem e Performance',
+    description: 'Organização de dados e publicação com automação e monitoramento para alta disponibilidade e velocidade.',
   },
 ];
 

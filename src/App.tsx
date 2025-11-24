@@ -18,15 +18,11 @@ export default function App() {
     target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  const heroSkillsIds = [
-    'skill-java',
-    'skill-react',
-    'skill-next',
-    'skill-typescript',
-    'skill-mysql',
-    'skill-postgres',
-    'skill-php',
-    'skill-english',
+  const heroSoftSkills = [
+    'Valorizo trabalho em equipe',
+    'Boa comunicação',
+    'Proatividade',
+    'Criatividade',
   ];
 
   return (
@@ -80,11 +76,10 @@ export default function App() {
                 Envie um e-mail
               </a>
             </div>
-            <div className="hero-tags" aria-label="Tecnologias em destaque">
-              {heroSkillsIds.map((id) => {
-                const skill = skills.find((s) => s.id === id);
-                return <span key={id}>{skill?.label}</span>;
-              })}
+            <div className="hero-tags" aria-label="Competências pessoais em destaque">
+              {heroSoftSkills.map((label) => (
+                <span key={label}>{label}</span>
+              ))}
             </div>
           </div>
 
