@@ -12,7 +12,7 @@ export const navLinks: Link[] = [
 export const highlights: Highlight[] = [
   { id: 'highlight-university', value: 'Uniasselvi', label: 'Análise e Desenvolvimento de Sistemas', description: 'ADS' },
   { id: 'highlight-caldeira', value: 'Instituto Caldeira', label: 'Geração Caldeira 2025', description: 'Trilha de JAVA' },
-  { id: 'highlight-cognitiva', value: 'Cognitiva Brasil', label: 'Desenvolvedor Front-End', description: 'Estágiario.' },
+  { id: 'highlight-cognitiva', value: 'Cognitiva Brasil', label: 'Desenvolvedor Front-End', description: 'Estágio concluído (2025–2026).' },
   { id: 'highlight-cert', value: '15+', label: 'Certificações', description: 'Cursos e especializações concluídos em tecnologia, programação e metodologias ágeis.' },
   { id: 'highlight-quality', value: '100%', label: 'Foco em qualidade e comunicação clara', description: 'Código limpo, testado e de fácil manutenção.' },
 ];
@@ -36,6 +36,20 @@ export const services: Service[] = [
 ];
 
 export const certificates: Certificate[] = [
+  {
+    id: 'cert-java-caldeira-228h',
+    image: '/images/Certificado GC-2025 _ Gabriel Guedes_page-0001.jpg',
+    title: 'Programação Java — Geração Caldeira (228h)',
+    description:
+      'POO, Git, bancos de dados e testes. Projetos Desktop e Web com metodologias ágeis.',
+  },
+  {
+    id: 'cert-lowcode-latromi-2026',
+    image: '/images/Certificado Low Code Latromi _ Gabriel Guedes_page-0001.jpg',
+    title: 'Desenvolvimento Low-Code — Latromi (11h)',
+    description:
+      'Fundamentos de low-code, SQL básico, consultas, formulários e criação de aplicações.',
+  },
   {
     id: 'cert-html-css',
     image: '/images/cert-html-css.png',
@@ -69,7 +83,7 @@ export const certificates: Certificate[] = [
   {
     id: 'cert-generation',
     image: '/images/cert-generation.png',
-    title: 'Geração Caldeira',
+    title: 'Kanban',
     description: 'Programa intensivo de soft skills e desenvolvimento ágil.',
   },
 ];

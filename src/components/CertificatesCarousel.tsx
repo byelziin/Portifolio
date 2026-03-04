@@ -11,17 +11,17 @@ export default function CertificatesCarousel() {
     const track = trackRef.current;
     if (!container || !track) return;
 
-    // Duplicar os certificados para criar o efeito infinito
-    const duplicatedCertificates = [...certificates, ...certificates];
-
-    // Criar elementos HTML para os certificados duplicados
-    duplicatedCertificates.forEach((certificate, index) => {
-      const article = document.createElement('article');
-      article.className = 'card certificate-card';
-      article.innerHTML = `
+    const buildTrack = (list: typeof certificates) => {
+      track.innerHTML = '';
+      container.scrollLeft = 0;
+      const duplicatedCertificates = [...list, ...list];
+      duplicatedCertificates.forEach((certificate, index) => {
+        const article = document.createElement('article');
+        article.className = 'card certificate-card';
+        article.innerHTML = `
         <div
           class="certificate-image"
-          style="background-image: url(${certificate.image})"
+          style="background-image: url('${encodeURI(certificate.image)}')"
           role="img"
           aria-label="${certificate.title}"
         ></div>
@@ -30,13 +30,14 @@ export default function CertificatesCarousel() {
           <p>${certificate.description}</p>
         </div>
       `;
-      
-      if (index >= certificates.length) {
-        article.setAttribute('aria-hidden', 'true');
-      }
-      
-      track.appendChild(article);
-    });
+        if (index >= list.length) {
+          article.setAttribute('aria-hidden', 'true');
+        }
+        track.appendChild(article);
+      });
+    };
+
+    buildTrack(certificates);
 
     let animationId: number;
     let scrollSpeed = 0.8;
@@ -148,6 +149,13 @@ export default function CertificatesCarousel() {
     };
 
     container.addEventListener('wheel', handleWheel, { passive: false });
+
+    if (import.meta.hot) {
+      import.meta.hot.accept('../data/portfolioContent.ts', (mod: any) => {
+        const next = mod?.certificates ?? certificates;
+        buildTrack(next);
+      });
+    }
 
     const handleVisibility = () => {
       if (document.hidden) {
