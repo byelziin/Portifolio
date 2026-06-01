@@ -65,8 +65,9 @@ export default function App() {
             </h1>
             <h2>Software Developer</h2>
             <p className="hero-text">
-              Transformo ideias em experiências digitais completas. Combino uma base sólida em desenvolvimento back e
-              front-end com boas práticas, colaboração e vontade constante de aprender.
+              Desenvolvedor com visão de negócio: traduzo necessidades em software e acompanho o impacto. Transformo
+              ideias em experiências digitais completas. Combino uma base sólida em desenvolvimento back e front-end com
+              boas práticas, colaboração e vontade constante de aprender.
             </p>
             <div className="hero-actions">
               <a className="primary-button" href="#contato" onClick={(event) => handleNavClick(event, 'contato')}>
@@ -104,7 +105,7 @@ export default function App() {
                 Sou uma pessoa apaixonada pela área de tecnologia, curioso por natureza e movida por desafios. Acredito no poder do aprendizado contínuo e gosto de explorar novas formas de criar, inovar e resolver problemas com propósito.
               </p>
               <p>
-                Mais do que escrever código, busco entender pessoas, construir soluções que façam diferença e evoluir um pouco mais a cada projeto. Sou um sonhador que acredita no impacto positivo da tecnologia e na força da colaboração para alcançar grandes resultados.
+                Mais do que escrever código, busco entender pessoas, construir soluções que façam diferença e evoluir um pouco mais a cada projeto. Atuo também com processos comerciais (SDR), o que melhora meu entendimento de necessidades e comunicação com clientes.
               </p>
             </div>
             <div className="stats-grid">

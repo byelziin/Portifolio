@@ -10,6 +10,7 @@ export const navLinks: Link[] = [
 ];
 
 export const highlights: Highlight[] = [
+  { id: 'highlight-bfr', value: 'BFR Investimentos', label: 'Desenvolvedor de Software', description: 'Atualmente. Atuo também com processos comerciais (SDR), o que melhora meu entendimento de necessidades e comunicação com clientes.' },
   { id: 'highlight-university', value: 'Uniasselvi', label: 'Análise e Desenvolvimento de Sistemas', description: 'ADS' },
   { id: 'highlight-caldeira', value: 'Instituto Caldeira', label: 'Geração Caldeira 2025', description: 'Trilha de JAVA' },
   { id: 'highlight-cognitiva', value: 'Cognitiva Brasil', label: 'Desenvolvedor Front-End', description: 'Estágio concluído (2025–2026).' },

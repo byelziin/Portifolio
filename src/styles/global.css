@@ -346,6 +346,10 @@ main {
   font-weight: 700;
   color: var(--accent-strong);
   display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .stat-card span {
