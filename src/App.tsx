@@ -43,7 +43,7 @@ export default function App() {
         </nav>
 
         <div className="header-actions">
-          <a className="ghost-button" href="https://github.com/byelziin" target="_blank" rel="noreferrer">
+          <a className="ghost-button" href="https://github.com/byelziin/Portifolio" target="_blank" rel="noreferrer">
             GitHub
           </a>
           <a
