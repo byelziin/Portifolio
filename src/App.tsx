@@ -2,6 +2,7 @@ import { useEffect, type MouseEvent } from 'react';
 import CertificatesCarousel from './components/CertificatesCarousel';
 
 import { certificates, highlights, navLinks, services, skills } from './data/portfolioContent';
+import { getAssetUrl } from './utils/assetUrl';
 
 export default function App() {
   useEffect(() => {
@@ -87,7 +88,7 @@ export default function App() {
           <div className="hero-portrait">
             <div className="hero-portrait-glow" />
             <div className="hero-portrait-ring" />
-            <img src="/images/image%20atualizada2.jpg" alt="Gabriel Guedes" />
+            <img src={getAssetUrl('/images/image%20atualizada2.jpg')} alt="Gabriel Guedes" />
           </div>
         </section>
 
@@ -159,7 +160,7 @@ export default function App() {
               <div key={skill.id} className="skill-card">
                 <div
                   className="skill-icon"
-                  style={{ backgroundImage: `url(${skill.image})` }}
+                  style={{ backgroundImage: `url(${getAssetUrl(skill.image)})` }}
                   role="img"
                   aria-label={skill.label}
                 />

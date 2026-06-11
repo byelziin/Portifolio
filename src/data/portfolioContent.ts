@@ -1,4 +1,5 @@
 import type { Certificate, Highlight, Link, Service, Skill } from '../types/portfolio';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const navLinks: Link[] = [
   { href: 'inicio', label: 'Início' },
@@ -39,64 +40,64 @@ export const services: Service[] = [
 export const certificates: Certificate[] = [
   {
     id: 'cert-java-caldeira-228h',
-    image: '/images/Certificado GC-2025 _ Gabriel Guedes_page-0001.jpg',
+    image: getAssetUrl('/images/Certificado GC-2025 _ Gabriel Guedes_page-0001.jpg'),
     title: 'Programação Java — Geração Caldeira (228h)',
     description:
       'POO, Git, bancos de dados e testes. Projetos Desktop e Web com metodologias ágeis.',
   },
   {
     id: 'cert-lowcode-latromi-2026',
-    image: '/images/Certificado Low Code Latromi _ Gabriel Guedes_page-0001.jpg',
+    image: getAssetUrl('/images/Certificado Low Code Latromi _ Gabriel Guedes_page-0001.jpg'),
     title: 'Desenvolvimento Low-Code — Latromi (11h)',
     description:
       'Fundamentos de low-code, SQL básico, consultas, formulários e criação de aplicações.',
   },
   {
     id: 'cert-html-css',
-    image: '/images/cert-html-css.png',
+    image: getAssetUrl('/images/cert-html-css.png'),
     title: 'HTML e CSS',
-    description: 'Fundamentos sólidos de layout responsivo e semântica.',
+    description: 'Fundamentos sólido de layout responsivo e semântica.',
   },
   {
     id: 'cert-git-github',
-    image: '/images/cert-git-github.jpg',
+    image: getAssetUrl('/images/cert-git-github.jpg'),
     title: 'Git & GitHub',
     description: 'Fluxos colaborativos, branches e pull requests profissionais.',
   },
   {
     id: 'cert-mysql',
-    image: '/images/cert-mysql.jpg',
+    image: getAssetUrl('/images/cert-mysql.jpg'),
     title: 'MySQL',
     description: 'Modelagem relacional, consultas otimizadas e procedures.',
   },
   {
     id: 'cert-logica-js',
-    image: '/images/cert-logica-js.png',
+    image: getAssetUrl('/images/cert-logica-js.png'),
     title: 'Lógica com JavaScript',
     description: 'Resolução de problemas e domínio da linguagem.',
   },
   {
     id: 'cert-java-listas',
-    image: '/images/cert-java-listas.png',
+    image: getAssetUrl('/images/cert-java-listas.png'),
     title: 'Java Collections',
     description: 'Manipulação eficiente de dados com listas, sets e maps.',
   },
   {
     id: 'cert-generation',
-    image: '/images/cert-generation.png',
+    image: getAssetUrl('/images/cert-generation.png'),
     title: 'Kanban',
     description: 'Programa intensivo de soft skills e desenvolvimento ágil.',
   },
 ];
 
 export const skills: Skill[] = [
-  { id: 'skill-java', image: '/images/skill-java.png', label: 'Java' },
-  { id: 'skill-javascript', image: '/images/skill-javascript.png', label: 'JavaScript' },
-  { id: 'skill-react', image: '/images/skill-react.png', label: 'React' },
-  { id: 'skill-mysql', image: '/images/skill-mysql.png', label: 'MySQL' },
-  { id: 'skill-php', image: '/images/skill-php.png', label: 'PHP' },
-  { id: 'skill-english', image: '/images/skill-english.png', label: 'Inglês Técnico' },
-  { id: 'skill-office', image: '/images/skill-office.png', label: 'Pacote Office' },
+  { id: 'skill-java', image: getAssetUrl('/images/skill-java.png'), label: 'Java' },
+  { id: 'skill-javascript', image: getAssetUrl('/images/skill-javascript.png'), label: 'JavaScript' },
+  { id: 'skill-react', image: getAssetUrl('/images/skill-react.png'), label: 'React' },
+  { id: 'skill-mysql', image: getAssetUrl('/images/skill-mysql.png'), label: 'MySQL' },
+  { id: 'skill-php', image: getAssetUrl('/images/skill-php.png'), label: 'PHP' },
+  { id: 'skill-english', image: getAssetUrl('/images/skill-english.png'), label: 'Inglês Técnico' },
+  { id: 'skill-office', image: getAssetUrl('/images/skill-office.png'), label: 'Pacote Office' },
   { id: 'skill-next', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', label: 'Next.js' },
   { id: 'skill-linux', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg', label: 'Linux' },
   { id: 'skill-postgres', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', label: 'PostgreSQL' },
